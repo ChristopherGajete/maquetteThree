@@ -1,0 +1,37 @@
+body {
+    background-color: lavender;
+}
+
+.container, .container-fluid {
+    background-color: brown;
+    color: white;
+    font-weight: bold;
+    padding: 0px;
+}
+
+#xl-div {background-color: darkblue;}
+#lg-div {background-color: crimson;}
+#md-div {background-color: chartreuse;}
+#sm-div {background-color: chocolate;}
+#xs-div {background-color: cornflowerblue;}
+
+/***************/
+
+#header {background-color: darkmagenta; padding: 0px;}
+
+#header-title {
+    padding: 20px 0px 20px 30px;
+    background-color: brown;
+}
+
+#header-navbar {
+    color: white;
+    background-color: orange;
+    display: inline-block;
+}
+
+ul li {display: inline-block;}
+a {color: white;}
+i {font-size: 40px;}
+
+a .row {text-align: center;}
