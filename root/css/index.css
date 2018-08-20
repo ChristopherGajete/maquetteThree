@@ -24,14 +24,73 @@ body {
     background-color: brown;
 }
 
+/*#region HEADER_NAVBAR*/
 #header-navbar {
     color: white;
     background-color: orange;
-    display: inline-block;
+    margin: 0;
+    padding: 0;
 }
 
-ul li {display: inline-block;}
-a {color: white;}
+#header-navbar li {
+    display: block;
+    margin: 0;
+    padding: 0;
+}
+#header-navbar a {
+    color: white;
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+}
+
+
+#header-navbar ul {
+    margin: 0;
+    padding: 0;
+    display: none;
+    position: absolute;
+    /* ensures dropdown menu does not push the row height*/
+    top: 100%;
+    left: 0;
+    z-index: 99999;
+    background-color: aqua;
+    color: black;
+}
+
+#header-navbar ul:after {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    width: 0;
+    height: 0;
+    content: '';
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 16px solid brown;
+}
+
+
 i {font-size: 40px;}
 
-a .row {text-align: center;}
+a .row {
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+
+
+#header-navbar li:hover ul {
+    display: flex;
+    flex-direction: column;
+}
+
+
+/*#endregion*/
+
+main img {
+    max-width: 100% !important;
+    height: auto;
+    display: block;
+}
