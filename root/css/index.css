@@ -127,12 +127,13 @@ a .row {
                 -3px 3px 3px gray;
 }
 
-#header-na
-#nav-fold a .row {
-    text-align: end;
+#i-col {
+    text-align: middle;
     margin: 0;
     padding: 0;
 }
+
+
 
 /*#endregion*/
 
