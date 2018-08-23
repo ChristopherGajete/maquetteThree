@@ -14,13 +14,10 @@ body {
     padding: 0px;
 }
 
-#xl-div {background-color: darkblue;}
-#lg-div {background-color: crimson;}
-#md-div {background-color: chartreuse;}
-#sm-div {background-color: chocolate;}
-#xs-div {background-color: cornflowerblue;}
+.col-xl-12 { margin: 0; padding: 0;}
 
-/***************/
+
+/*#region HEADER*/
 
 #header { 
     padding: 0;
@@ -136,4 +133,23 @@ a .row {
 
 
 /*#endregion*/
+
+/*#endregion*/
+
+
+/*#region MAIN*/
+
+
+main .row {
+    margin: 0; padding: 0;
+}
+
+/*#region MAIN-CAROUSEL*/
+
+
+/*#endregion*/
+
+
+/*#endregion*/
+
 
