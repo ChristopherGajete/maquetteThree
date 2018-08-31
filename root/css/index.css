@@ -3,15 +3,12 @@ body {
 
 }
 
-.header-color {
-    background-color: chartreuse;
-}
-
 .container, .container-fluid {
     background-color: brown;
     color: white;
     font-weight: bold;
     padding: 0px;
+    min-width: 450px;
 }
 
 .col-xl-12 { margin: 0; padding: 0;}
@@ -21,34 +18,47 @@ body {
 
 #header { 
     padding: 0;
-    height: 68px;
     background-color: darkmagenta;
 }
 
 #header .row {
     padding: 0;
     margin: 0;
-    height: 100%;
 }
 
 #header-title {
     padding: 4px 0px 22px 30px;
     margin: 0;
 }
+#header-navbar-folder-2 {
+    margin: 0; padding: 0;
+}
+
+#header-title, #header-navbar {
+    height: 68px;
+}
+
+#nav-fold i, #nav-fold-2 i {
+    font-size: 40px;
+    color: white;
+}
+
+#nav-fold-2 {
+    margin: 0; padding: 0; 
+    text-align: end;
+}
+
 
 /*#region HEADER_NAVBAR*/
 
-
 #header-navbar {
     color: white;
-    margin: 0 !important;
+    margin: 0;
     padding: 4px 0px 4px 0px;
     font-weight: normal;
     font-size: 0.7rem;
-    float: right;
-
 }
-#header-navbar-folded, #header-navbar-folder {
+#header-navbar-folded, #header-navbar-folder, #header-navbar-folder-2 {
     margin: 0;
     padding: 0;
 }
@@ -58,6 +68,8 @@ body {
     margin: 0;
     padding: 0;
 }
+
+
 #header-navbar a {
     color: white;
     text-decoration: none;
@@ -65,6 +77,7 @@ body {
     padding: 0;
     text-align: center;
 }
+
 
 i {
     font-size: 40px;
@@ -79,15 +92,14 @@ a .row {
     /* margin: 0; */
     left: 0;
     margin-top: 4px;
-    padding: 20px 30px 15px 30px;
-    width: 200%;
+    padding: 20px 40px 15px 30px;
+    width: auto;
 
     display: none;
     position: absolute;
     /* ensures dropdown menu does not push the row height*/
     z-index: 45;
     background-color: aqua;
-    color: black;
 }
 
 #header-navbar-folded ul:after {
@@ -114,21 +126,33 @@ a .row {
     right: 30px;
 }
 
-
 #header-navbar-folded li:hover ul {
     display: flex;
     flex-direction: column;
+
     font-size: 1rem;
     overflow: hidden;
     box-shadow: 3px 3px 3px gray,
                 -3px 3px 3px gray;
 }
 
-#i-col {
+#i-col, #i-col-2 {
     text-align: middle;
     margin: 0;
     padding: 0;
 }
+
+.nav-text {
+    text-align: center;
+}
+
+
+/*#endregion*/
+
+/*#endregion*/
+
+
+
 
 
 
@@ -142,10 +166,40 @@ a .row {
 
 main .row {
     margin: 0; padding: 0;
+
 }
 
 /*#region MAIN-CAROUSEL*/
 
+.carousel-item { 
+    height: 100%;
+    margin: 0; padding: 0;
+}
+.carousel-item .row {
+    height: 100%;
+    color: black;
+    font-weight: bold;
+    margin: 0; padding: 0;
+}
+.item-img, .item-article {
+    height: 300px;
+    padding: 0; margin: 0;
+}
+
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    background-color: violet;
+}
+
+
+
+.item-article {
+    background-color: coral;
+}
+
 
 /*#endregion*/
 
@@ -153,3 +207,72 @@ main .row {
 /*#endregion*/
 
 
+/*#region MEDIA QUERIES*/
+
+@media (max-width: 575.98px) {
+    /* xs */
+    #header {
+        background-color: navy;
+        height: 136px;
+    }
+    #carousel-maquette {height: 600px;}
+    i {font-size: 35px;}
+    #header-title {
+        padding-left: 10px;
+    }
+    
+    #header-navbar {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+}
+
+@media (min-width: 576px) and (max-width: 767.98px) {
+    /* sm */
+    #header {
+        background-color: yellowgreen;
+        height: 136px;
+        padding: 0; margin: 0;
+    }
+    #carousel-maquette {height: 600px;}  
+    i {font-size: 40px;}
+    #header-title, #header-navbar {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+    /* md */
+    #header {
+        background-color: orangered;
+        height: 136px;
+    }
+    i {font-size: 30px;}
+    #carousel-maquette {height: 300px;}
+}
+
+@media (min-width: 992px) and (max-width: 1199.98px) {
+    /* lg */
+    #header {
+        background-color: goldenrod;
+        height: 68px;
+    }
+    #carousel-maquette {height: 300px;}
+    i {font-size: 40px;}
+    #header-title {padding-left: 30px;}
+}
+
+@media (min-width: 1200px) {
+    /* xl */
+    #header {
+        background-color: darkmagenta;
+        height: 68px;
+    }
+    #carousel-maquette {height: 300px;}
+    i {font-size: 40px;}
+    #header-title {padding-left: 30px;}
+}
+
+
+/*#endregion*/
