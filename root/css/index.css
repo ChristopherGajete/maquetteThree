@@ -1,5 +1,6 @@
 body {
     background-color: lavender;
+    padding: 0; margin: 0;
 
 }
 
@@ -7,11 +8,12 @@ body {
     background-color: brown;
     color: white;
     font-weight: bold;
-    padding: 0px;
+    padding: 0; /*margin: 0; */
     min-width: 450px;
+    position: relative;
 }
 
-.col-xl-12 { margin: 0; padding: 0;}
+.col-xl-12, .col-12 { margin: 0; padding: 0;}
 
 
 /*#region HEADER*/
@@ -99,7 +101,7 @@ a .row {
     position: absolute;
     /* ensures dropdown menu does not push the row height*/
     z-index: 45;
-    background-color: aqua;
+    background-color: #24d4d4;
 }
 
 #header-navbar-folded ul:after {
@@ -142,6 +144,11 @@ a .row {
     padding: 0;
 }
 
+#header-navbar-folded li ul li {
+    margin-top: 6px; margin-bottom: 6px;
+    line-height: 17px; font-size: 16px;
+}
+
 .nav-text {
     text-align: center;
 }
@@ -163,13 +170,48 @@ a .row {
 
 /*#region MAIN*/
 
+#carousel-maquette {
+}
+
+#arrow-control-left, #arrow-control-right {
+    position: absolute;
+    color: white;
+    opacity: 0.6;
+    padding: 0;
+    z-index: 99999; /*button not clickable otherwise*/
+    cursor: pointer;
+}
+
+#arrow-control-left i {
+    font-size: 24px;
+}
+#arrow-control-right i {
+    font-size: 24px;
+}
+
+
 
 main .row {
     margin: 0; padding: 0;
-
 }
 
 /*#region MAIN-CAROUSEL*/
+.carousel-indicators {
+    padding: 0; margin: 0;
+    top: 360px;
+    z-index: 99999;
+}
+
+.carousel-indicators li {
+    height: 12px; width: 12px;
+    margin-left: 8px; margin-right: 8px;
+    border-radius: 75%;
+    border-color: white;
+    opacity: 0.6;
+    border-style: solid;
+    border-width: 1px;
+    background: transparent;
+}
 
 .carousel-item { 
     height: 100%;
@@ -182,7 +224,7 @@ main .row {
     margin: 0; padding: 0;
 }
 .item-img, .item-article {
-    height: 300px;
+    height: 400px;
     padding: 0; margin: 0;
 }
 
@@ -197,9 +239,41 @@ img {
 
 
 .item-article {
-    background-color: coral;
+    background-color: #f5f5f5;
+    padding-top: 67px; 
+    padding-bottom: 57px;
+    padding-left: 40px !important;
+    padding-right: 50px !important;
 }
 
+.article-content {
+    height: 100%;
+    padding: 0;
+    font-size: 16px; font-weight: 400;
+}
+.article-head {
+    color: #580058;
+    font-size: 17px;
+    line-height: 18px;
+}
+.article-title {
+    font-size: 24px; font-weight: bold;
+    line-height: 27px;
+    padding-left: 6px;
+}
+.article-text {
+    line-height: 19px;
+}
+.article-link-button {
+    display: inline-block;
+    background-color: #24d4d4;
+    color: white;
+    text-decoration: none !important;
+    padding: 10px 32px 10px 32px;
+}
+.article-link-button:hover {
+    color: white;
+}
 
 /*#endregion*/
 
@@ -215,8 +289,8 @@ img {
         background-color: navy;
         height: 136px;
     }
-    #carousel-maquette {height: 600px;}
-    i {font-size: 35px;}
+    #carousel-maquette {height: 800px;}
+    #header i {font-size: 35px;}
     #header-title {
         padding-left: 10px;
     }
@@ -234,8 +308,8 @@ img {
         height: 136px;
         padding: 0; margin: 0;
     }
-    #carousel-maquette {height: 600px;}  
-    i {font-size: 40px;}
+    #carousel-maquette {height: 800px;}  
+    #header i {font-size: 40px;}
     #header-title, #header-navbar {
         padding-left: 20px;
         padding-right: 20px;
@@ -248,8 +322,13 @@ img {
         background-color: orangered;
         height: 136px;
     }
-    i {font-size: 30px;}
-    #carousel-maquette {height: 300px;}
+    #header i {font-size: 30px;}
+    #carousel-maquette {height: 400px;}
+    .item-article {
+        padding-top: 40px; 
+        padding-bottom: 40px;
+        padding-right: 30px !important;
+    }
 }
 
 @media (min-width: 992px) and (max-width: 1199.98px) {
@@ -258,8 +337,8 @@ img {
         background-color: goldenrod;
         height: 68px;
     }
-    #carousel-maquette {height: 300px;}
-    i {font-size: 40px;}
+    #carousel-maquette {height: 400px;}
+    #header i {font-size: 40px;}
     #header-title {padding-left: 30px;}
 }
 
@@ -269,8 +348,8 @@ img {
         background-color: darkmagenta;
         height: 68px;
     }
-    #carousel-maquette {height: 300px;}
-    i {font-size: 40px;}
+    #carousel-maquette {height: 400px;}
+    #header i {font-size: 40px;}
     #header-title {padding-left: 30px;}
 }
 
